@@ -113,6 +113,14 @@
             flex-direction: column;
             width: 100%;
         }
+        
+        #home img {
+            margin: 40px ;
+            border-radius: 5px;
+            width: 200px;
+            height: 260px;
+            margin-bottom: 10px;
+        }
 
         #home .child1 i {
             font-size: 100px;
@@ -145,7 +153,7 @@
             left: 0;
             background-color: rgb(56, 208, 238);
             padding: 5px;
-            border-radius: 50px;
+            border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
@@ -156,7 +164,7 @@
 
         #skills {
             padding: 50px 20px;
-            background-color: #040404;
+            background-color: black;
             display: flex;
             justify-content: space-around;
             color: white;
@@ -169,7 +177,7 @@
             grid-template-columns: repeat(4, 1fr);
 
             text-align: center;
-
+          
 
 
 
@@ -181,11 +189,14 @@
             border-radius: 5px;
             border: none;
             padding: 10px;
-
             width: 100%;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
 
+        }
+
+        .info2 button:hover{
+            background-color: #005bb5;
         }
 
 
@@ -212,6 +223,9 @@
             height: 50%;
             width: 100%;
             text-align: center;
+         
+            transition: background 0.5s,transform 0.5s;
+
         }
 
         #skills .info2 ul {
@@ -234,10 +248,29 @@
             padding: 5px 0;
         }
 
+        #skills > div:hover {
+            background-color: #4d0909;
+            transform: translateY(-10px) ;
+            
+        }
+
 
         #projects {
             padding: 50px 20px;
             background-color: #020202;
+        }
+
+        #projects > div > div{
+           
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            transition: background 0.5s,transform 0.5s;
+           
+
+        }
+
+        #projects > div > div:hover{
+            background-color: #333;
+            transform: translateY(-10px) ;
         }
 
         #projects img {
@@ -259,7 +292,7 @@
         }
 
         .project {
-            background-color: #1f0505;
+            /* background-color: #1f0505; */
             padding: 20px;
             border-radius: 8px;
             width: calc(33.333% - 40px);
@@ -285,33 +318,69 @@
         }
 
 
+
+
         #about {
             padding: 50px 20px;
             background-color: #050505;
+            /* border: 1px solid white; */
+            color: white;
+            display: flex;
+            justify-content: center;
+          
+            
+
+           
+           
+
+        }
+        
+        #about .about-summury{
+            padding: 30px 10px;
+          
+            width: 500px;
+            align-items: center;
         }
 
         #about h3 {
-            text-align: center;
+          text-align: center;
             font-size: 24px;
-            margin-bottom: 20px;
-            color: white;
+          
+            
         }
 
-        .about.section {
-            display: flex;
+        #about.section {
+            display: grid;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             text-align: center;
             color: white;
+           
+        
+        } 
+
+        #about img {
+            margin: 40px ;
+            border-radius: 5px;
+            width: 200px;
+            height: 240px;
+            margin-bottom: 10px;
+            transition: background 0.5s,transform 0.5s;
+           
+            
+            
         }
 
-        .about img {
-            border-radius: 5px;
-            width: 170px;
-            height: 170px;
-            margin-bottom: 10px;
+        #about img:hover{
+            transform: translateY(-10px) ;
         }
+
+        #about h4:hover{
+            color: red;
+        }
+
+
 
 
         #contact1 {
@@ -484,7 +553,37 @@
             .project {
                 width: calc(100% - 40px);
             }
+
+            #about {
+            padding: 50px 20px;
+            background-color: #050505;
+           
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+          
+          
+            
+
         }
+
+       
+
+        #about .about-summury{
+            padding: 30px 10px;
+        
+            width: auto;
+            align-items: center;
+        }
+
+        
+
+
+    }
+
+
     </style>
 
 </head>
@@ -508,7 +607,7 @@
             <li><a class="nav-link projects" href="#projects">Projects</a></li>
             <li><a class="nav-link cantact" href="#contact">contact</a></li>
             <li><a class="nav-link resume"
-                    href="https://drive.google.com/file/d/1w7wbmTK1baAUy2cAnC9RSCymTTYsFgfG/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1mvXSKLgh5C8tgYUXj3U8Ca7W6QGTstka/view?usp=sharing"
                     target="_blank">Resume</a>
             </li>
         </ul>
@@ -517,7 +616,7 @@
 
     <div id="home">
         <div class="child1">
-            <i class="fa-solid fa-user fa-beat"></i>
+           <img src="./images/chetan.jpg" alt="chetan-photo">
         </div>
         <div class="child2">
             <div class="name">
@@ -632,7 +731,7 @@
             </div>
             <div class="project">
 
-                <img src="./images/weather.jpg" alt="">
+                <img src="./images/weather.jpg" alt="" >
                 <h5>Weather Application</h5>
                 <p>This project is a web application that fetches and displays weather information for a specified city.
                     It uses an API to retrieve weather data and dynamically updates the webpage to show the current
@@ -645,16 +744,21 @@
     </div>
 
     <div id="about">
-        <h3>About</h3>
-
-        <div class="about section">
-            <img src="./images/chetan.jpg" alt="">
-            <div>
+        
+        <div class="about-image"><img src="https://camo.githubusercontent.com/01c83210f7feb975ea3b9a852808beb6689425add471f76f942c15875626af5d/68747470733a2f2f696d616765732e73717561726573706163652d63646e2e636f6d2f636f6e74656e742f76312f3537363966633430316236333162616231616464623261622f313534313538303631313632342d5445363451474b524a4738535741495553374e532f6b6531375a77644742546f6464493870446d34386b506f73776c7a6a53564d4d2d53784f703743563539425a772d7a505067646e346a557756634a45315a7657515578776b6d794578676c4e714770304976544a5a616d574c49327a76595748384b332d735f3479737a63703272795449304871544f6161556f68724938504936465879386339505774426c7141566c555335697a7064634958445a71445976707252715a32395077306f2f636f64696e672d667265616b2e676966" alt="">
+        </div>
+        <div id="about section">
+           
+            <div class="about-summury">
                 <h4>Dynamic and detail-oriented full stack web developer
                     with robust expertise in the MERN stack, including
                     React.js, Node.js, Express.js, and MongoDB.
                     Demonstrates exceptional problem-solving and
                     collaboration skills.</h4>
+                    <br>
+                    <h4>Frontend Development :<p1> HTML, CSS, JavaScript, React.js</p1></h4><br>
+                    <h4> Backend Development : <p1>Node.js, Express.js, RESTful APIs</p1></h4><br>
+                    <h4>Database Management : <p1>MySQL, MongoDB</p1></h4>
             </div>
         </div>
 
@@ -685,7 +789,7 @@
         </form>
 
         <div id="cmt">
-            <h3><a href="/comments.html">Comments</a></h3>
+            <h3><a href="./comment.html" target="_blank">Comments</a></h3>
         </div>
 
     </div>
@@ -718,6 +822,8 @@
     document.getElementById("visitform").addEventListener("submit", function (event) {
         event.preventDefault();
         addComment();
+        document.getElementById("visitform").reset();
+
 
 
     });
@@ -744,24 +850,18 @@
         comments.push({ name, message, email });
         localStorage.setItem("comments", JSON.stringify(comments));
 
-        displayData();
-
-        document.getElementById("visitform").reset();
+       
 
 
 
-    }
+       
 
-    function deletecomment(index) {
-        const comments = JSON.parse(localStorage.getItem("comments")) || [];
-        comments.splice(index, 1);
-        localStorage.setItem("comments", JSON.stringify(comments));
-        displayData();
+
 
     }
 
-    displayData();
-
+   
+  
 
 </script>
 

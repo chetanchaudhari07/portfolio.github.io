@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+}
+.comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    
+}
+.comment h3 {
+    margin: 0 0 5px 0;
+}
+.comment p {
+    margin: 0 0 10px 0;
+}
