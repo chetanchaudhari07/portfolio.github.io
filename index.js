@@ -1,6 +1,7 @@
 
-document.getElementById("downloadresume").addEventListener("click",()=>{
-   
+document.getElementById("downloadresume").addEventListener("click",(event)=>{
+    event.preventDefault()
+
     const resumeUrl = "./resume/Chetan_Chaudhari_Resume.pdf";
   
     window.open(resumeUrl, '_blank');
